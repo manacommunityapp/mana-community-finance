@@ -1,6 +1,6 @@
 package com.manacommunity.api.finance.service;
 
-import com.manacommunity.api.exception.ResourceNotFoundException;
+import com.manacommunity.common.exception.ResourceNotFoundException;
 import com.manacommunity.api.finance.entity.LedgerCustomer;
 import com.manacommunity.api.finance.repository.LedgerCustomerRepository;
 import lombok.RequiredArgsConstructor;
@@ -59,3 +59,4 @@ public class LedgerCustomerService {
         repo.deleteById(id);
     }
 }
+

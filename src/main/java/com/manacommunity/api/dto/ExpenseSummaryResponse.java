@@ -1,5 +1,6 @@
 package com.manacommunity.api.dto;
 
+import com.manacommunity.common.model.Community;
 import java.math.BigDecimal;
 
 /**
@@ -16,3 +17,4 @@ public record ExpenseSummaryResponse(
         long rejectedCount,
         BigDecimal rejectedAmount
 ) {}
+

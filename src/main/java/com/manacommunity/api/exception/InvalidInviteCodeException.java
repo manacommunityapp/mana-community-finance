@@ -1,5 +1,6 @@
 package com.manacommunity.api.exception;
 
+import com.manacommunity.common.model.Community;
 import org.springframework.http.HttpStatus;
 
 /** Thrown when the community invite code provided during registration is invalid. */
@@ -10,3 +11,4 @@ public class InvalidInviteCodeException extends ManaCommunityException {
                 HttpStatus.BAD_REQUEST, "INVALID_INVITE_CODE");
     }
 }
+

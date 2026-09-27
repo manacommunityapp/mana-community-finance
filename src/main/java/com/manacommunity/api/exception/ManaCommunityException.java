@@ -1,5 +1,6 @@
 package com.manacommunity.api.exception;
 
+import com.manacommunity.common.model.Community;
 import org.springframework.http.HttpStatus;
 
 /**
@@ -26,3 +27,4 @@ public class ManaCommunityException extends RuntimeException {
     public HttpStatus getStatus() { return status; }
     public String getErrorCode() { return errorCode; }
 }
+

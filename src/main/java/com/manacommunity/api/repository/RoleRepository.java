@@ -1,6 +1,6 @@
 package com.manacommunity.api.repository;
 
-import com.manacommunity.api.model.Role;
+import com.manacommunity.common.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,3 +16,4 @@ public interface RoleRepository extends JpaRepository<Role, Long> {
     boolean existsByNameIgnoreCaseAndCommunityId(String name, Long communityId);
     boolean existsByNameIgnoreCaseAndCommunityIdIsNull(String name);
 }
+

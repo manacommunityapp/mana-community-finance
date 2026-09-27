@@ -1,6 +1,6 @@
 package com.manacommunity.api.finance.service;
 
-import com.manacommunity.api.exception.ResourceNotFoundException;
+import com.manacommunity.common.exception.ResourceNotFoundException;
 import com.manacommunity.api.finance.entity.FinanceReceipt;
 import com.manacommunity.api.finance.repository.FinanceReceiptRepository;
 import lombok.RequiredArgsConstructor;
@@ -64,3 +64,4 @@ public class FinanceReceiptService {
         };
     }
 }
+

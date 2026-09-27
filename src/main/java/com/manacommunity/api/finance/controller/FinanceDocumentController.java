@@ -4,7 +4,7 @@ import com.manacommunity.api.finance.dto.FinanceDocumentDto;
 import com.manacommunity.api.finance.entity.FinanceDocument;
 import com.manacommunity.api.finance.service.FinanceDocumentService;
 import com.manacommunity.api.service.PermissionCheckService;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.security.UserPrincipal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -52,3 +52,4 @@ public class FinanceDocumentController {
         return ResponseEntity.noContent().build();
     }
 }
+

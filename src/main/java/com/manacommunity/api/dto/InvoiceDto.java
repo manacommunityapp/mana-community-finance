@@ -1,5 +1,6 @@
 package com.manacommunity.api.dto;
 
+import com.manacommunity.common.enums.ExpenseCategory;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -31,3 +32,4 @@ public class InvoiceDto {
     private List<LineItemDto> lineItems;
     private Long assetId; // Optional link to existing asset
 }
+

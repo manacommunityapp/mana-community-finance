@@ -1,6 +1,6 @@
 package com.manacommunity.api.finance.service;
 
-import com.manacommunity.api.exception.ResourceNotFoundException;
+import com.manacommunity.common.exception.ResourceNotFoundException;
 import com.manacommunity.api.finance.dto.FinanceCreditNoteDto;
 import com.manacommunity.api.finance.entity.FinanceCreditNote;
 import com.manacommunity.api.finance.entity.FinanceLineItem;
@@ -149,3 +149,4 @@ public class FinanceCreditNoteService {
                 .build();
     }
 }
+

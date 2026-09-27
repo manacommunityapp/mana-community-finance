@@ -1,5 +1,6 @@
 package com.manacommunity.api.repository;
 
+import com.manacommunity.common.model.Community;
 import com.manacommunity.api.model.Expense;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -34,3 +35,4 @@ public interface ExpenseRepository extends JpaRepository<Expense, Long> {
     BigDecimal sumAmountByCommunityAndStatus(@Param("communityId") Long communityId,
                                              @Param("status") String status);
 }
+

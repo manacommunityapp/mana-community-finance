@@ -1,13 +1,14 @@
 package com.manacommunity.api.service;
 
+import com.manacommunity.common.model.Community;
 import com.manacommunity.api.dto.ExpenseRequest;
 import com.manacommunity.api.dto.ExpenseResponse;
 import com.manacommunity.api.dto.ExpenseSummaryResponse;
-import com.manacommunity.api.dto.PagedResponse;
-import com.manacommunity.api.exception.ResourceNotFoundException;
+import com.manacommunity.common.dto.PagedResponse;
+import com.manacommunity.common.exception.ResourceNotFoundException;
 import com.manacommunity.api.model.Expense;
 import com.manacommunity.api.repository.ExpenseRepository;
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.user.model.AppUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -162,3 +163,5 @@ public class ExpenseService {
         return Math.min(Math.max(size, 1), MAX_PAGE_SIZE);
     }
 }
+
+

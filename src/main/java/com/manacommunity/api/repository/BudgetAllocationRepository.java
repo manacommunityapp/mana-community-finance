@@ -1,7 +1,7 @@
 package com.manacommunity.api.repository;
 
 import com.manacommunity.api.model.BudgetAllocation;
-import com.manacommunity.api.model.ExpenseCategory;
+import com.manacommunity.common.enums.ExpenseCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,3 +14,4 @@ public interface BudgetAllocationRepository extends JpaRepository<BudgetAllocati
     List<BudgetAllocation> findByFinancialYear(String financialYear);
     List<BudgetAllocation> findByFinancialYearOrderByCategoryAsc(String financialYear);
 }
+

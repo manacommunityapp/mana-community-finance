@@ -1,6 +1,7 @@
 package com.manacommunity.api.model;
 
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.model.Community;
+import com.manacommunity.common.user.model.AppUser;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -67,3 +68,5 @@ public class Expense {
         updatedAt = LocalDateTime.now();
     }
 }
+
+

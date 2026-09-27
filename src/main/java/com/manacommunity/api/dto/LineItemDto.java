@@ -1,6 +1,6 @@
 package com.manacommunity.api.dto;
 
-import com.manacommunity.api.model.ExpenseCategory;
+import com.manacommunity.common.enums.ExpenseCategory;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -20,3 +20,4 @@ public class LineItemDto {
     private String location;
     private String serialNumber;
 }
+

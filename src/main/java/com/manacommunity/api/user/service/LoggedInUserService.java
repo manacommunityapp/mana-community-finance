@@ -1,9 +1,11 @@
 package com.manacommunity.api.user.service;
 
-import com.manacommunity.api.exception.ResourceNotFoundException;
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.repository.AppUserRepository;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.model.Community;
+import com.manacommunity.common.model.Role;
+import com.manacommunity.common.exception.ResourceNotFoundException;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.repository.AppUserRepository;
+import com.manacommunity.common.user.security.UserPrincipal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -54,3 +56,5 @@ public class LoggedInUserService {
         }
     }
 }
+
+

@@ -1,7 +1,7 @@
 package com.manacommunity.api.controller;
 
 import com.manacommunity.api.model.BudgetAllocation;
-import com.manacommunity.api.model.ExpenseCategory;
+import com.manacommunity.common.enums.ExpenseCategory;
 import com.manacommunity.api.repository.BudgetAllocationRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -74,3 +74,4 @@ public class BudgetController {
         return ResponseEntity.ok().build();
     }
 }
+

@@ -1,5 +1,6 @@
 package com.manacommunity.api.model;
 
+import com.manacommunity.common.enums.ExpenseCategory;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -72,3 +73,4 @@ public class PurchaseRequest {
         updatedAt = LocalDateTime.now();
     }
 }
+

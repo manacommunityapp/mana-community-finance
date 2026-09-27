@@ -1,11 +1,12 @@
 package com.manacommunity.api.user.security;
 
-import com.manacommunity.api.security.CorrelationIdFilter;
+import com.manacommunity.common.model.AuditLog;
+import com.manacommunity.common.security.CorrelationIdFilter;
 
-import com.manacommunity.api.security.AuditLogService;
+import com.manacommunity.common.security.AuditLogService;
 
-import com.manacommunity.api.user.model.UserSession;
-import com.manacommunity.api.user.repository.UserSessionRepository;
+import com.manacommunity.common.user.model.UserSession;
+import com.manacommunity.common.user.repository.UserSessionRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -121,3 +122,6 @@ public class SessionService {
         return s.length() <= max ? s : s.substring(0, max);
     }
 }
+
+
+

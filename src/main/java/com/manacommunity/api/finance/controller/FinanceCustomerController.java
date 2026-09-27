@@ -3,7 +3,7 @@ package com.manacommunity.api.finance.controller;
 import com.manacommunity.api.finance.entity.LedgerCustomer;
 import com.manacommunity.api.finance.service.LedgerCustomerService;
 import com.manacommunity.api.service.PermissionCheckService;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.security.UserPrincipal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -49,3 +49,4 @@ public class FinanceCustomerController {
         return ResponseEntity.noContent().build();
     }
 }
+

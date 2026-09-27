@@ -3,7 +3,7 @@ package com.manacommunity.api.finance.controller;
 import com.manacommunity.api.finance.dto.FinanceCreditNoteDto;
 import com.manacommunity.api.finance.service.FinanceCreditNoteService;
 import com.manacommunity.api.service.PermissionCheckService;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.security.UserPrincipal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -59,3 +59,4 @@ public class FinanceCreditNoteController {
         return ResponseEntity.noContent().build();
     }
 }
+

@@ -1,6 +1,6 @@
 package com.manacommunity.api.dto;
 
-import com.manacommunity.api.model.ExpenseCategory;
+import com.manacommunity.common.enums.ExpenseCategory;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -12,3 +12,4 @@ public class BudgetAllocationRequest {
     private BigDecimal allocatedAmount;
     private String notes;
 }
+

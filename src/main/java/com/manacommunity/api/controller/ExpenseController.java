@@ -1,12 +1,13 @@
 package com.manacommunity.api.controller;
 
+import com.manacommunity.common.model.Community;
 import com.manacommunity.api.dto.ExpenseRequest;
 import com.manacommunity.api.dto.ExpenseResponse;
 import com.manacommunity.api.dto.ExpenseSummaryResponse;
-import com.manacommunity.api.dto.PagedResponse;
+import com.manacommunity.common.dto.PagedResponse;
 import com.manacommunity.api.service.ExpenseService;
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -141,3 +142,5 @@ public class ExpenseController {
         return user;
     }
 }
+
+

@@ -1,11 +1,11 @@
 package com.manacommunity.api.controller;
 
-import com.manacommunity.api.dto.PagedResponse;
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.dto.PagedResponse;
+import com.manacommunity.common.user.model.AppUser;
 import com.manacommunity.api.model.Invoice;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.repository.InvoiceRepository;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.service.BillingService;
 import lombok.Builder;
 import lombok.Data;
@@ -126,3 +126,4 @@ public class BillingController {
         private LocalDateTime paidAt;
     }
 }
+

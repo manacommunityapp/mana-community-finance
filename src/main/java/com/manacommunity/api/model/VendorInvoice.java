@@ -1,5 +1,6 @@
 package com.manacommunity.api.model;
 
+import com.manacommunity.common.enums.ExpenseCategory;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.JdbcTypeCode;
@@ -150,3 +151,4 @@ public class VendorInvoice {
         updatedAt = LocalDateTime.now();
     }
 }
+

@@ -1,5 +1,6 @@
 package com.manacommunity.api.service;
 
+import com.manacommunity.common.enums.ExpenseCategory;
 import com.manacommunity.api.dto.InvoiceDto;
 import com.manacommunity.api.dto.LineItemDto;
 import com.manacommunity.api.dto.PaymentRequest;
@@ -177,3 +178,4 @@ public class InvoiceService {
         return String.valueOf(java.time.LocalDate.now().getYear());
     }
 }
+
