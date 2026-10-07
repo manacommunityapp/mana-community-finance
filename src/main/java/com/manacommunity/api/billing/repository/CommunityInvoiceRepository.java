@@ -31,6 +31,8 @@ public interface CommunityInvoiceRepository extends JpaRepository<CommunityInvoi
 
     Page<CommunityInvoice> findByCommunityId(Long communityId, Pageable pageable);
 
+    List<CommunityInvoice> findByCommunityId(Long communityId);
+
     List<CommunityInvoice> findByCommunityIdAndStatusAndDueDateBefore(
             Long communityId, InvoiceStatus status, LocalDate date);
 

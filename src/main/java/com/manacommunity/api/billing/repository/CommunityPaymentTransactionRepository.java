@@ -14,5 +14,6 @@ public interface CommunityPaymentTransactionRepository extends JpaRepository<Com
     Optional<CommunityPaymentTransaction> findByTransactionRef(String transactionRef);
     List<CommunityPaymentTransaction> findByInvoiceId(Long invoiceId);
     Page<CommunityPaymentTransaction> findByCommunityId(Long communityId, Pageable pageable);
+    List<CommunityPaymentTransaction> findByCommunityId(Long communityId);
     List<CommunityPaymentTransaction> findByCommunityIdAndFlatNumberAndTower(Long communityId, String flatNumber, String tower);
 }

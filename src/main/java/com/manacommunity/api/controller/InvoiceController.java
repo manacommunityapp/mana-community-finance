@@ -15,6 +15,7 @@ import java.util.List;
 public class InvoiceController {
 
     @Autowired
+    @org.springframework.beans.factory.annotation.Qualifier("procurementInvoiceService")
     private InvoiceService invoiceService;
 
     @GetMapping

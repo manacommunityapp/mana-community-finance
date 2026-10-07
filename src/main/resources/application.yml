@@ -4,6 +4,8 @@ server:
     context-path: /
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: mana-community-finance
   datasource:
@@ -23,3 +25,7 @@ app:
   jwt:
     secret: ${JWT_SECRET:9a4f8c2e1b6d3a7e5f8b0c4d2e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f}
     expiration-ms: 86400000
+  security:
+    jwt:
+      secret: ${JWT_SECRET:9a4f8c2e1b6d3a7e5f8b0c4d2e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f}
+      expiration-ms: 86400000
