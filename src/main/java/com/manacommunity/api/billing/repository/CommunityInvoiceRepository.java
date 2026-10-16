@@ -45,6 +45,22 @@ public interface CommunityInvoiceRepository extends JpaRepository<CommunityInvoi
     @Query("SELECT SUM(i.outstandingAmount) FROM CommunityInvoice i WHERE i.communityId = :communityId AND i.billingPeriod = :period")
     BigDecimal sumTotalOutstandingByPeriod(@Param("communityId") Long communityId, @Param("period") String period);
 
+
+    @Query("SELECT COALESCE(SUM(i.paidAmount), 0) FROM CommunityInvoice i WHERE i.communityId = :cid AND i.invoiceDate BETWEEN :from AND :to")
+    BigDecimal sumCollectedBetween(@Param("cid") Long communityId, @Param("from") LocalDate from, @Param("to") LocalDate to);
+
+    @Query("SELECT COALESCE(SUM(i.outstandingAmount), 0) FROM CommunityInvoice i WHERE i.communityId = :cid AND i.status IN :statuses AND i.dueDate < :asOf")
+    BigDecimal sumOverdueBefore(@Param("cid") Long communityId, @Param("statuses") List<InvoiceStatus> statuses, @Param("asOf") LocalDate asOf);
+
+    @Query("SELECT COALESCE(SUM(i.totalAmount), 0) FROM CommunityInvoice i WHERE i.communityId = :cid AND i.invoiceDate BETWEEN :from AND :to")
+    BigDecimal sumTotalBilledBetween(@Param("cid") Long communityId, @Param("from") LocalDate from, @Param("to") LocalDate to);
+
+    @Query("SELECT COALESCE(SUM(i.outstandingAmount), 0) FROM CommunityInvoice i WHERE i.communityId = :cid AND i.status IN :statuses")
+    BigDecimal sumOutstandingByStatuses(@Param("cid") Long communityId, @Param("statuses") List<InvoiceStatus> statuses);
+
+    long countByCommunityIdAndStatus(Long communityId, InvoiceStatus status);
+
+    long countByCommunityIdAndStatusAndDueDateBefore(Long communityId, InvoiceStatus status, LocalDate date);
     @Query("SELECT i.tower, SUM(i.paidAmount), SUM(i.totalAmount) FROM CommunityInvoice i " +
            "WHERE i.communityId = :communityId AND i.billingPeriod = :period GROUP BY i.tower")
     List<Object[]> getTowerCollectionsByPeriod(@Param("communityId") Long communityId, @Param("period") String period);
